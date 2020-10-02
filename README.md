@@ -1,6 +1,6 @@
 
 # Foreign Exchange Application
-[![Build Status](https://travis-ci.org/justayar/walmart_book_shop.svg?branch=master)](https://travis-ci.org/justayar/walmart_book_shop)
+[![Build Status](https://travis-ci.org/github/justayar/ForeignExchange.svg?branch=master)](https://travis-ci.org/github/justayar/ForeignExchange)
 [![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 
 Foreign Exchange Application gets the exchange rates of currencies according to base and quote symbols. You can calculate the converted amount in source and target
