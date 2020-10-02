@@ -1,0 +1,39 @@
+server:
+  port: 8090
+
+ratesApiProvider:
+  exchangeRateService: https://api.ratesapi.io/api/latest
+  conversionRateService: https://api.ratesapi.io/api/
+
+resilience4j:
+  circuitbreaker:
+    configs:
+      default:
+        registerHealthIndicator: true
+        slidingWindowSize: 10
+        minimumNumberOfCalls: 5
+        permittedNumberOfCallsInHalfOpenState: 3
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        waitDurationInOpenState: 5s
+        failureRateThreshold: 50
+        eventConsumerBufferSize: 10
+        recordExceptions:
+          - org.springframework.web.client.HttpServerErrorException
+          - java.util.concurrent.TimeoutException
+          - java.io.IOException
+    instances:
+      mainService:
+        baseConfig: default
+
+spring:
+  h2:
+    console:
+      enabled: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+  datasource:
+
+numberOfRecordOnPageableRequest: 2
+
+transactionDateFormat : yyyy-MM-dd
