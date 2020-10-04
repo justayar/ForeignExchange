@@ -10,7 +10,7 @@ currency. It also stores the conversions and lists them in a paginated fashion.
 
 For building and running the application you need:
 
-- [JDK 1.8](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html)
+- [JDK 11](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
 - [Maven 4](https://maven.apache.org)
 - [Lombok](https://projectlombok.org/)
     * For IntelliJ [Lombok IntelliJ Plugin] (https://plugins.jetbrains.com/plugin/6317-lombok)
